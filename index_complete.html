@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<title>New Option for Electricity
+</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+</head>
+  <body>
+    <header>
+        <video src="./24691_1280x720.mp4"controls autoplay playinline loop></video>
+        <div class="key-messeage"><h1>電力に新たな選択肢を。<br>New options for electricity</h1></div>
+        <nav>
+          <ul>
+            <li><a href="#concept">コンセプト</a></li>
+            <li><a href="#new-power">新電力とは</a></li>
+            <li><a href="#search-menu">検索メニュー</a></li>
+            <li><a href="#container">問い合わせフォーム</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="steel写真">
+        <img src="https://th.bing.com/th?id=OIP.UD2l9Ui5yW07_JfKYVZBAQHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+        <img src="https://th.bing.com/th?id=OIP.ggcGioOc--05TcodBDsv3QHaEq&w=314&h=198&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+        <img src="https://th.bing.com/th?id=OIP.1R887wpw9zmtBQn-fhb0UQHaEx&w=311&h=200&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+      </div>
+      <section id="concept">
+        <div class="concept-hover"><h2>コンセプト <br>-concept-</h2></div>
+        <div class="鉄鋼業界の課題1"><p>鉄鋼業界の課題は、高炉・電炉メーカーと巨大ユーザーに挟まれ<br>収益維持に苦しむ加工メーカー、部品メーカーが多数存在することです。</p></div>
+        <div class="鉄鋼業界の課題2"><p>材料費、労務費の自律的低減は困難を極め、<br>電力費を中心とした経費も増加の一途を辿っているのではないでしょうか。</p></div>
+        <div class="鉄鋼業界の課題3"><p>大手電力以外の選択肢を検討したいものの、<br>「新電力は何となく怖い」「安定供給されるか不安だし、価格変動も激しい印象がある」</p></div>
+        <div class="鉄鋼業界の課題4"><p>当サービスのコンセプトは「新電力」の解像度を上げることです。<br>「何となく不安」ではなく「きちんと理解した」状態で、電力構成を検討する一助になれば幸いです。</p></div>
+    
+    </section>
+    
+      <section id="new-power">
+        <div class="新電力とはhover"><h2>新電力とは <br></h2></div>
+        <div class="新電力とは1"><p>電力自由化以降に新規参入した小売電気事業者のことを、新電力と言います。
+            <br>大手電力の寡占市場だった中、2016年に完全自由化したことで民間企業が新規参入できるようになりました。</p></div>
+        <div class="新電力図解1"><img src="https://energy.afterfit.co.jp/hs-fs/hubfs/%E3%82%B0%E3%83%A9%E3%83%95%EF%BC%88PPS%EF%BC%89/blog1014-004-800.png?width=1125&name=blog1014-004-800.png" alt=""></div>
+        <div class="新電力とは2"><p>新電力はほとんどの企業がJEPXという卸売市場から電気を仕入れ、
+            <br>それを需要家に供給するビジネス形態となっています。流れとしては下記の通りです。</p></div>
+        <div class="新電力図解2"><img src="https://energy.afterfit.co.jp/hs-fs/hubfs/%E3%82%B0%E3%83%A9%E3%83%95%EF%BC%88PPS%EF%BC%89/blog1014-003-800.png?width=1050&name=blog1014-003-800.png" alt=""></div>
+        <div class="新電力とは3"><p>電源を持たないことから、一般的には以下2つが懸念視されることが多いです。</p></div>
+        <div class="新電力とは箇条書き">
+            <ul>
+                <li>安定供給力に欠ける</li>
+                <li>価格ボラティリティが激しい</li>
+            </ul>
+        </div>
+        <div class="新電力とは4"><p>しかし、新電力の中にも発電所を有する企業が存在することを、先ずは理解を深めていきましょう。</p></div>
+    </section>
+    
+      <section id="search-menu">
+        <div class="検索hover"><h2>検索メニュー</h2></div>
+        <div id="search-form">
+            <label for="company-name">会社名:</label>
+            <input type="text" id="company-name">
+        
+            <label for="power-plant">発電所:</label>
+            <input type="text" id="power-plant">
+        
+            <label for="location">所在地:</label>
+            <input type="text" id="location">
+        
+            <label for="power-capacity">発電能力 (kWh/年):</label>
+            <input type="number" id="power-capacity">
+        
+            <label for="supply-area">供給地域:</label>
+            <input type="text" id="supply-area">
+        
+            <button onclick="search()">検索</button>
+            <button onclick="reset()">リセット</button>
+          </div>
+
+          <div id="search-results">
+            <table id="results-table">
+              <thead>
+                <tr>
+                  <th>会社名</th>
+                  <th>発電所</th>
+                  <th>所在地</th>
+                  <th>発電能力 (kWh/年)</th>
+                  <th>供給地域</th>
+                </tr>
+              </thead>
+              <tbody id="results-body">
+              </tbody>
+            </table>
+          </div>
+        </table>
+
+        <div id="container">]
+          <h2>問い合わせフォーム</h2>
+          <form id="contactForm">
+            <label for="companyName">会社名:</label>
+            <input type="text" id="companyName" required>
+        
+            <label for="subject">件名:</label>
+            <input type="text" id="subject" required>
+        
+            <label for="content">内容:</label>
+            <textarea id="content" rows="6" required></textarea>
+        
+            <label for="email">アドレス:</label>
+            <input type="email" id="email" required>
+        
+            <input type="submit" value="送信" onclick="submitForm()">
+          </form>
+
+          <h2>JEPX/スポット価格推移</h2>
+          <input type="file" id="csvFileInput" accept=".csv">
+          <button onclick="importCSV()">インポート</button>
+          <canvas id="chartCanvas"></canvas>
+
+          <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+  <script>
+// Sample data (CSV format)
+const csvData = `イーレックス株式会社,佐伯発電所（バイオマス）,大分県,315000,全国
+イーレックス株式会社,豊前発電所（バイオマス）,福岡県,750000,全国
+イーレックス株式会社,中城発電所（バイオマス）,沖縄県,350000,全国
+大和エネルギー株式会社,西予発電所（風力）,愛媛,350000,四国
+大和エネルギー株式会社,佐田発電所（風力）,愛媛,306020,四国
+エネット株式会社,ポンテシオ発電所,北海道,,北海道
+エネット株式会社,川口第二発電所,宮城県,,東北
+エネット株式会社,真岡発電所,栃木県,,関東
+エネット株式会社,宮の郷木質発電所（バイオマス）,茨城県,,関東
+エネット株式会社,イースクエア発電所,千葉県,,関東
+エネット株式会社,岐阜発電所（バイオマス）,岐阜県,,北陸
+エネット株式会社,泉北発電所（天然ガス）,大阪府,,関西
+エネット株式会社,宮崎発電所（バイオマス）,宮崎県,,九州
+エネット株式会社,わいた発電所（地熱）,熊本県,,九州
+ミツゴロウグリーンエネルギー株式会社,神栖発電所（風力）,茨城県,20000000,関東
+ミツゴロウグリーンエネルギー株式会社,久美原発電所（風力）,愛知県,3200000,中部
+ミツゴロウグリーンエネルギー株式会社,的山大島発電所（風力）,長崎県,70000000,九州
+ミツゴロウグリーンエネルギー株式会社,ミツウロコ岩国発電所（バイオマス）,山口県,10000,中国
+ミツゴロウグリーンエネルギー株式会社,水郷潮来発電所（メガソーラー）,茨城県,15500000,関東
+ミツゴロウグリーンエネルギー株式会社,冨津発電所（メガソーラー）,千葉県,42000000,関東`;
+
+// CSVデータをダウンロードする関数
+function downloadCSV(csvData, filename) {
+  // 文字列をBOM付きUTF-8エンコードされたBlobオブジェクトに変換
+  const csvBlob = new Blob(["\uFEFF" + csvData], { type: "text/csv;charset=UTF-8" });
+
+  // ダウンロード用のURLを生成
+  const downloadLink = document.createElement("a");
+  downloadLink.href = URL.createObjectURL(csvBlob);
+  downloadLink.download = filename;
+
+  // ダウンロードリンクをクリックしてダウンロードを開始
+  downloadLink.click();
+
+  // URLオブジェクトを解放
+  URL.revokeObjectURL(downloadLink.href);
+}
+
+// ダウンロードボタンを生成
+function createDownloadButton() {
+  const button = document.createElement("button");
+  button.textContent = "CSVダウンロード";
+  button.addEventListener("click", function() {
+    downloadCSV(csvData, "data.csv");
+  });
+  return button;
+}
+
+// ダウンロードボタンを生成してページに追加
+const downloadButton = createDownloadButton();
+document.body.appendChild(downloadButton);
+
+// Parse CSV data and store as an array of objects
+const data = csvData.split('\n').map(row => {
+  const columns = row.split(',');
+  return {
+    company: columns[0],
+    powerPlant: columns[1],
+    location: columns[2],
+    powerCapacity: parseInt(columns[3]),
+    supplyArea: columns[4]
+  };
+});
+
+// Function to display search results
+function displayResults(results) {
+  const resultsBody = document.getElementById('results-body');
+  resultsBody.innerHTML = '';
+
+  results.forEach(result => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${result.company}</td>
+      <td>${result.powerPlant}</td>
+      <td>${result.location}</td>
+      <td>${result.powerCapacity}</td>
+      <td>${result.supplyArea}</td>
+    `;
+    resultsBody.appendChild(row);
+  });
+}
+
+// Function to perform search based on selected criteria
+function search() {
+  const companyName = document.getElementById('company-name').value.toLowerCase();
+  const powerPlant = document.getElementById('power-plant').value.toLowerCase();
+  const location = document.getElementById('location').value.toLowerCase();
+  const powerCapacity = parseInt(document.getElementById('power-capacity').value);
+  const supplyArea = document.getElementById('supply-area').value.toLowerCase();
+
+  const results = data.filter(item => {
+    return (companyName === '' || item.company.toLowerCase().includes(companyName)) &&
+           (powerPlant === '' || item.powerPlant.toLowerCase().includes(powerPlant)) &&
+           (location === '' || item.location.toLowerCase().includes(location)) &&
+           (isNaN(powerCapacity) || item.powerCapacity >= powerCapacity) &&
+           (supplyArea === '' || item.supplyArea.toLowerCase().includes(supplyArea));
+  });
+
+  displayResults(results);
+}
+
+// Function to reset search criteria and display all results
+function reset() {
+  document.getElementById('company-name').value = '';
+  document.getElementById('power-plant').value = '';
+  document.getElementById('location').value = '';
+  document.getElementById('power-capacity').value = '';
+  document.getElementById('supply-area').value = '';
+
+  displayResults(data);
+}
+
+// Display all results initially
+displayResults(data);
+
+$('.steel写真').slick();
+function submitForm() {
+      // フォームの入力値を取得
+      const companyName = document.getElementById('companyName').value;
+      const subject = document.getElementById('subject').value;
+      const content = document.getElementById('content').value;
+      const email = document.getElementById('email').value;
+
+      // メール送信の疑似処理
+      // ここではアラート表示で代用
+      alert(`以下の内容で送信します。\n\n会社名: ${companyName}\n件名: ${subject}\n内容: ${content}\nアドレス: ${email}`);
+
+      // フォームの入力内容をリセット
+      document.getElementById('contactForm').reset();
+    }
+
+    function importCSV() {
+      var fileInput = document.getElementById("csvFileInput");
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function(e) {
+        var contents = e.target.result;
+        var lines = contents.split("\n");
+        var data = [];
+
+        for (var i = 1; i < lines.length; i++) {
+          var columns = lines[i].split(",");
+          var date = columns[0];
+          var price = parseFloat(columns[1]);
+          data.push({ date: date, price: price });
+        }
+
+        renderChart(data);
+      };
+
+      reader.readAsText(file);
+    }
+
+    function renderChart(data) {
+      var chartCanvas = document.getElementById("chartCanvas");
+      var ctx = chartCanvas.getContext("2d");
+
+      var dates = data.map(function(item) {
+        return item.date;
+      });
+
+      var prices = data.map(function(item) {
+        return item.price;
+      });
+
+      var chart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: dates,
+          datasets: [
+            {
+              label: "システムプライス(円/kWh)",
+              data: prices,
+              borderColor: "blue",
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: "受渡日"
+              }
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: "システムプライス(円/kWh)"
+              }
+            }
+          }
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>
